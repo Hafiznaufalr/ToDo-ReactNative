@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
 
 export default class Note extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class Note extends React.Component {
           <Text style={styles.noteDeleteText}>Delete</Text>
          </TouchableOpacity>
       </View>
-    );  
+    );   
   }
 } 
 

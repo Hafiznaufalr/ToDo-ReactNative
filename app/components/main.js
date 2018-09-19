@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View,ScrollView,TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView,TextInput, TouchableOpacity } from 'react-native';
 
 import Note from './note';
 
@@ -25,13 +25,14 @@ export default class Main extends React.Component {
         </Text>
         </View> 
         <ScrollView style={styles.ScrollContainer}>
+        {notes}
         </ScrollView>
           <View style={styles.footer}>
            
            <TextInput
            onChangeText={(noteText) => this.setState({noteText})}
            style={styles.textInput}
-           placeholder="write note here"
+           placeholder="Write note here"
            placeholderTextColor="white"/>
 
            </View>
@@ -56,8 +57,8 @@ export default class Main extends React.Component {
       
     }
   }
-  deleteNote(key){
-  this.setState({noteArray: this.state.noteArray})
+   Note(key){
+  this.state({noteArray: this.state.noteArray})
   this.setState({noteText: ''})
   }
 } 
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   textInput:{
    alignSelf:'stretch',
    color:'#fff',
-   padding: 30,
+   padding: 15,
    backgroundColor:'#252525',
    borderTopWidth:2,
    borderTopColor:'#ededed',
@@ -106,14 +107,15 @@ const styles = StyleSheet.create({
     right:10,
     bottom: 90,
     backgroundColor: '#E91E63',
-    width: 50,
-    height:50,
+    width: 60,
+    height:60,
     borderRadius: 50,
     alignItems:'center',
     justifyContent:'center',
   },
   addButtonText:{
     color:'white',
-    fontSize:24,
+    fontSize:30,
+    paddingBottom:5,
   }
 });
